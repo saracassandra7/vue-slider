@@ -12,21 +12,27 @@
   <title>Vue Slider</title>
 </head>
 <body>
-  <div class="main-wrapper">
-    <div class="slider-container">
-      <div class="slider">
-        <!-- immagini da js -->
-      </div>
-
-      <div class="thumbnail-container">
-        <div class="btn-prev">
-          <i class="fa-solid fa-chevron-left"></i></div>
-        <div class="btn-next">
-          <i class="fa-solid fa-chevron-right"></i>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="slider-container">
+        <div class="slider">
+          <!-- immagini da js -->
+          <img :src="images[activeImage].url" :alt="images[activeImage].name">
         </div>
-
-        <div class="thumbnail-preview">
-          <!-- anteprime da js -->
+  
+        <div class="thumbnail-container">
+          <div class="btn-prev">
+            <i class="fa-solid fa-chevron-left"></i></div>
+          <div class="btn-next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+  
+          <div class="thumbnail-preview">
+            <!-- anteprime da js -->
+            <img  v-for="(image, indice) in images" :src="image.url"
+            class="thumbnail-image" 
+            :class="{'active' : indice === activeImage}">
+          </div>
         </div>
       </div>
     </div>
