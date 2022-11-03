@@ -18,6 +18,10 @@
         <div class="slider">
           <!-- immagini da js -->
           <img :src="images[activeImage].url" :alt="images[activeImage].name">
+          <div class="img-text">
+            <h3>{{images[activeImage].name}}</h3>
+            <p>{{images[activeImage].caption}}</p>
+          </div>
         </div>
   
         <div class="thumbnail-container">
