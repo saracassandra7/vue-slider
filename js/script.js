@@ -40,6 +40,19 @@ createApp({
   methods:{
     changeImg(index){
       this.activeImage = index;
-    }
+    },
+
+    nextPrev(isNext){
+      if (isNext) this.activeImage++
+      else this.activeImage--
+
+      //verifico che il contatore non vada sotto lo zero o oltre il numero di elementi
+      if(this.activeImage === this.images.length){
+        this.activeImage = 0;
+      } else if (this.activeImage < 0){
+        this.activeImage = this.images.length -1;
+      }
+    },
+
   }
 }).mount('#app')
