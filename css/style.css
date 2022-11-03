@@ -92,6 +92,7 @@ body {
   filter: brightness(0.5);
   width: calc(100% / 5);
   height: 100%;
+  cursor: pointer;
 }
 
 .thumbnail-image img {

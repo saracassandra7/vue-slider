@@ -36,5 +36,10 @@ createApp({
       ],
       activeImage : 0,
     }
+  },
+  methods:{
+    changeImg(index){
+      this.activeImage = index;
+    }
   }
 }).mount('#app')

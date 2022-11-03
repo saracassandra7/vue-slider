@@ -33,7 +33,9 @@
   
           <div class="thumbnail-preview">
             <!-- anteprime da js -->
-            <img  v-for="(image, indice) in images" :src="image.url"
+            <img  v-for="(image, indice) in images" 
+            @click = "changeImg(indice)"
+            :src="image.url"
             class="thumbnail-image" 
             :class="{'active' : indice === activeImage}">
           </div>
